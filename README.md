@@ -57,6 +57,8 @@ $ docker tag maven-dind your_user_name/repository
 $ docker push your_user_name/repository
 ```
 ## Configure the docker hub credentials on Jenkins
+Add a new credential on jenkins, choose username and password as Type and **docker_hub_creds** as ID, the username and password
+should be your docker hub's username/password. 
 
 ![Docker hub credentials](images/credentials.png)
 
