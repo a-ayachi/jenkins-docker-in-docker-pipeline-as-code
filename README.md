@@ -1,4 +1,13 @@
-
+This is a simple example of how to use Jenkins, docker in docker and jenkinsfile (pipeline as code) to build
+and push your docker image to docker hub.<br>
+It's a simple Spring boot project that use mongodb, on the integration test we will use the docker-compose 
+to define our mongo database.
+<br>
+We will construct our DIND (docker in docker) image that we will use to build the project, this image will contain
+Java, maven, docker and docker-compose.
+<br>
+After building the project, we will build and push our docker image to docker hub.
+##Setup Jenkins
 **Create a network that will be used by jenkins and docker dind**
 ```bash
 $ docker network create jenkins
@@ -35,21 +44,32 @@ Go to http://localhost:8080, and put the Administrator password to unlock Jenkin
 $ docker exec -it jenkins-container cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-## Prepare the maven-dind docker image
+##Prepare the maven-dind docker image
 This image will be used as agent to build our project on jenkins, it contain maven, java docker and docker-compose
 ```bash
 $ cd maven-dind
 $ docker build -t maven-dind .
 ```
-You can plush this image to your docker hub account
+You can publish this image to your docker hub account
 ```bash
 $ docker login -u your_user_name -p your_password
 $ docker tag maven-dind your_user_name/repository
 $ docker push your_user_name/repository
 ```
-## Create a repository on github and push the project to it
-```bash
-$
-```
+##Configure the docker hub credentials on Jenkins
 
+![Docker hub credentials](images/credentials.png)
+
+## Create new pipeline project
+![Create pipeline project](images/new-item.png)
+## Configure your pipeline
+![configure the pipeline](images/pipeline.png)
+<br><br>
+After the pipeline configuration, you can start building the project <br>
+When the build finish you can see the result using **Open blue Ocean**
+![deploy result](images/deploy.png)
+<br><br>
+You can check your docker hub account for the new image.
+<br>
+![docker hub](images/dockerhub.png)
 
