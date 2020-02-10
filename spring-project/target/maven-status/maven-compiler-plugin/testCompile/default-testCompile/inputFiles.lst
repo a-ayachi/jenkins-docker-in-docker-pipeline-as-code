@@ -1,0 +1,3 @@
+/home/formation/Documents/jenkinsOcean/spring-project/src/test/java/com/example/mongo/demoMongo/services/CustomerServiceTest.java
+/home/formation/Documents/jenkinsOcean/spring-project/src/integration-test/java/com/example/mongo/demoMongo/controllers/CustomerControllerWithMockMvcIT.java
+/home/formation/Documents/jenkinsOcean/spring-project/src/integration-test/java/com/example/mongo/demoMongo/controllers/CustomerControllerWithRestAssuredIT.java

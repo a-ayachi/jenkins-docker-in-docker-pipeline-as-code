@@ -1,0 +1,5 @@
+/home/formation/Documents/jenkinsOcean/spring-project/src/main/java/com/example/mongo/demoMongo/data/Customer.java
+/home/formation/Documents/jenkinsOcean/spring-project/src/main/java/com/example/mongo/demoMongo/repositories/CustomerRepository.java
+/home/formation/Documents/jenkinsOcean/spring-project/src/main/java/com/example/mongo/demoMongo/services/CustomerService.java
+/home/formation/Documents/jenkinsOcean/spring-project/src/main/java/com/example/mongo/demoMongo/DemoMongoApplication.java
+/home/formation/Documents/jenkinsOcean/spring-project/src/main/java/com/example/mongo/demoMongo/controllers/CustomerController.java
