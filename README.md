@@ -6,8 +6,8 @@ to define our mongo database.
 We will construct our DIND (docker in docker) image that we will use to build the project, this image will contain
 Java, maven, docker and docker-compose.
 <br>
-After building the project, we will build and push our docker image to docker hub.
-##Setup Jenkins
+After building the project, we will build and push our docker image to docker hub.<br>
+## Setup Jenkins
 **Create a network that will be used by jenkins and docker dind**
 ```bash
 $ docker network create jenkins
@@ -56,7 +56,7 @@ $ docker login -u your_user_name -p your_password
 $ docker tag maven-dind your_user_name/repository
 $ docker push your_user_name/repository
 ```
-##Configure the docker hub credentials on Jenkins
+## Configure the docker hub credentials on Jenkins
 
 ![Docker hub credentials](images/credentials.png)
 
